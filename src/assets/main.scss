@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&family=Inter:wght@300;400;500;700&display=swap');
+
+// Базовые цвета
+$color-white: #ffffff;
+$color-black: #121212;
+$color-light-gray: #dedede;
+$color-dark-gray: #575757;
+$color-placeholder: #9c9c9c;
+
+// Светлая тема (по умолчанию)
+:root {
+  // Основные цвета
+  --color-text-primary: #{$color-black};
+  --color-text-secondary: #{$color-dark-gray};
+  --color-bg: #{$color-white};
+  --color-card-bg: #{$color-white};
+  --color-card-secondary: #f0f0f0;
+  --color-accent: #9b4b4b;
+  --color-card-overlay: #{$color-white};
+  --color-card-title: #{$color-black};
+  --color-card-year: #9b4b4b;
+  --color-card-line: #9b4b4b;
+  --color-card-placeholder-bg: #f0f0f0;
+  --color-card-placeholder-text: #{$color-dark-gray};
+
+  // Элементы интерфейса
+  --color-toggle-bg: #fcfcfc;
+  --color-toggle-hover: #f3f3f3;
+  --color-toggle-icon: #{$color-black};
+  --color-logo: #{$color-dark-gray};
+
+  // Пагинация
+  --color-pagination-text: #{$color-dark-gray};
+  --color-pagination-active-bg: #f3f3f3;
+  --color-pagination-active-text: #{$color-dark-gray};
+  --color-pagination-hover-line: #9c9c9c;
+  --color-pagination-arrow-hover-bg: #f3f3f3;
+  --color-pagination-arrow-hover-fill: #{$color-black};
+
+  // Поиск
+  --color-search-bg: #{$color-white};
+  --color-search-border: #dedede;
+  --color-search-icon: #{$color-dark-gray};
+  --color-search-text: #{$color-dark-gray};
+  --color-search-placeholder: #{$color-placeholder};
+  --color-search-active-border: #{$color-dark-gray};
+}
+
+// Темная тема
+.dark {
+  // Основные цвета
+  --color-text-primary: #{$color-light-gray};
+  --color-text-secondary: #{$color-light-gray};
+  --color-bg: #121212;
+  --color-card-bg: #1a1818;
+  --color-card-secondary: #1a1818;
+  --color-accent: #ab8956;
+  --color-card-overlay: #{$color-black};
+  --color-card-title: #{$color-light-gray};
+  --color-card-year: #ab8956;
+  --color-card-line: #ab8956;
+  --color-card-placeholder-bg: #1a1818;
+  --color-card-placeholder-text: #{$color-light-gray};
+
+  // Элементы интерфейса
+  --color-toggle-bg: #1a1818;
+  --color-toggle-hover: #1b1b1b;
+  --color-toggle-icon: #{$color-light-gray};
+  --color-logo: #{$color-light-gray};
+
+  // Пагинация
+  --color-pagination-text: #{$color-light-gray};
+  --color-pagination-active-bg: #1a1818;
+  --color-pagination-active-text: #{$color-light-gray};
+  --color-pagination-hover-line: #{$color-dark-gray};
+  --color-pagination-arrow-hover-bg: #1a1818;
+  --color-pagination-arrow-hover-fill: #{$color-white};
+
+  // Поиск
+  --color-search-bg: #1a1818;
+  --color-search-border: #1a1818;
+  --color-search-icon: #{$color-light-gray};
+  --color-search-text: #{$color-light-gray};
+  --color-search-placeholder: #{$color-dark-gray};
+  --color-search-active-border: #{$color-light-gray};
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  box-sizing: content-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  max-width: 280px;
+
+  @media (min-width: 768px) {
+    max-width: 728px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1240px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 100px;
+  }
+}
